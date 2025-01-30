@@ -53,17 +53,15 @@ const Links: React.FC = () => {
   )
 }
     </div> 
-    <button>mwnu</button>
-    {
-        open && <div className="">
-            {links.map((link) => (
-        // <Link href={link.path} key={link.title}>
-        //   {link.title}
-        // </Link>
-        <NavBarLink  item={link} key={link.title} />
-      ))}
-        </div>
-    }
+    <button onClick={()=> setOpen((prev)=> !prev)}>mwnu</button>
+    {open && (
+  <div className="absolute top-[100px] right-0 h-[calc(100vh-100px)] flex flex-col items-center justify-center gap-[10px]">
+    {links.map((link) => (
+      <NavBarLink item={link} key={link.title} />
+    ))}
+  </div>
+)}
+
     </div>
   );
 };
