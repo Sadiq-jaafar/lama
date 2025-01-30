@@ -35,7 +35,7 @@ const Links: React.FC = () => {
   return (
     <div className="">
 
-    <div className='flex gap-[10px] justify-items-center'>
+    <div className='flex gap-[10px] justify-items-center max-[760px]:hidden'>
       {links.map((link) => (
         // <Link href={link.path} key={link.title}>
         //   {link.title}
@@ -53,9 +53,9 @@ const Links: React.FC = () => {
   )
 }
     </div> 
-    <button onClick={()=> setOpen((prev)=> !prev)}>mwnu</button>
+    <button className='min-[760px]:hidden block cursor-pointer' onClick={()=> setOpen((prev)=> !prev)}>mwnu</button>
     {open && (
-  <div className="absolute top-[100px] right-0 h-[calc(100vh-100px)] flex flex-col items-center justify-center gap-[10px]">
+  <div className="absolute bg-slate-500 top-[100px] right-0 h-[calc(100vh-100px)] flex flex-col items-center justify-center gap-[10px]">
     {links.map((link) => (
       <NavBarLink item={link} key={link.title} />
     ))}
