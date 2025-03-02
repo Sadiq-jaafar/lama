@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className='flex items-center justify-between h-[100px] text-gray-50 p-4'>
+    <div className='flex items-center justify-between h-[100px] text-gray-50 p-4 max-md:flex-col'>
       {/* Left-aligned content (Brand Name) */}
       <div className="font-bold text-lg">MaxDev</div>
 

@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import NavBarLink from './NavBarLink';
+import Image from 'next/image';
 
 export interface LinkItem {
   title: string;
@@ -53,9 +54,18 @@ const Links: React.FC = () => {
   )
 }
     </div> 
-    <button className='min-[760px]:hidden block cursor-pointer' onClick={()=> setOpen((prev)=> !prev)}>mwnu</button>
+    <button ></button>
+     <Image
+              src="/assets/menu.png"
+              alt="menu"
+              width={30}
+              height={30}
+              className='w-[30px] h-[30px] min-[760px]:hidden block cursor-pointer'
+              onClick={()=> setOpen((prev)=> !prev)}
+              
+            />
     {open && (
-  <div className="absolute bg-slate-500 top-[100px] right-0 h-[calc(100vh-100px)] flex flex-col items-center justify-center gap-[10px]">
+  <div className="absolute bg-[#0d0c22] top-[100px] right-0 h-[calc(100vh-100px)] flex flex-col items-center justify-center gap-[10px]">
     {links.map((link) => (
       <NavBarLink item={link} key={link.title} />
     ))}
